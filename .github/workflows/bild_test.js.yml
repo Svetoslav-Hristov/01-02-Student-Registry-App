@@ -24,10 +24,11 @@ jobs:
     - name: Run test
       run: npm test
 
-   deploy_to_render:
+  deploy_to_render:
       needs: build_test
-       runs-on: ubuntu-latest
-    steps:
+      runs-on: ubuntu-latest
+      
+      steps:
       - name: Deploy to production
         uses: johnbeynon/render-deploy-action@v0.0.8
         with:
